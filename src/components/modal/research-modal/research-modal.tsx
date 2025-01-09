@@ -63,7 +63,7 @@ const ResearchModal = ({closeModal, idResearch, refreshResearchList}:Props) => {
         e.preventDefault();
 
         try{
-            const apiClient = new HttpService("http://localhost:5000");
+            const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
             const bodyData = new FormData();
 
             bodyData.append('title', formData.title);
@@ -102,7 +102,7 @@ const ResearchModal = ({closeModal, idResearch, refreshResearchList}:Props) => {
 
     const getResearch= async ()=>{
         try{
-            const apiClient = new HttpService("http://localhost:5000");
+            const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
 
             const res = await apiClient.get(`/research/${idResearch}`);
             const data=await res.json();

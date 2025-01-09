@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
 
     const getInit =async () => {
         try{
-            const apiClient = new HttpService("http://localhost:5000");
+            const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
 
             const res = await apiClient.get("/dashboard");
             const data=await res.json();
@@ -58,7 +58,7 @@ const Dashboard: React.FC = () => {
 
     const refreshResearchList = async ()=>{
         try{
-            const apiClient = new HttpService("http://localhost:5000");
+            const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
 
             const res = await apiClient.get("/research/all");
             const data=await res.json();

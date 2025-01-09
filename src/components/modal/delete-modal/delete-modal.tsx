@@ -13,7 +13,7 @@ const DeleteModal = ({closeModal, idResearch, refreshResearchList}:Props) => {
 
     const deleteResearch= async () => {
         try{
-            const apiClient = new HttpService("http://localhost:5000");
+            const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
 
             const res = await apiClient.delete(`/research/${idResearch}`);
             const data=await res.json();

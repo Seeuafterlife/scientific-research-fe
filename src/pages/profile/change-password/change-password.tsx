@@ -52,7 +52,7 @@ const ChangePassword = () => {
                     password: formData.password,
                 }
 
-                const apiClient = new HttpService("http://localhost:5000");
+                const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
                 const res = await apiClient.put("/user/change-password", userCreate);
 
                 const data=await res.json();

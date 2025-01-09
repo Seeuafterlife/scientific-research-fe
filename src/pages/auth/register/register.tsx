@@ -10,7 +10,7 @@ import { getDecodedToken } from "utils/get-decoded-token/get-decoded-token";
 import { useGlobalContext } from "context/global-context/global-context";
 import { useNavigate } from "react-router-dom";
 
-const apiClient = new HttpService("http://localhost:5000");
+const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
 
 const Register: React.FC = () => {
     const { notifyError } = useToast();

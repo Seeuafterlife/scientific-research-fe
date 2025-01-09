@@ -10,7 +10,7 @@ import { getDecodedToken } from "utils/get-decoded-token/get-decoded-token";
 import { User } from "data-model/user/user";
 import { useNavigate } from "react-router-dom";
 
-const apiClient = new HttpService("http://localhost:5000");
+const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
 
 const Login: React.FC = () => {
     const { notifyError } = useToast();

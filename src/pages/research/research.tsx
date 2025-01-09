@@ -9,7 +9,7 @@ const Research: React.FC = () => {
 
     const getResearchList=async ()=>{
         try{
-            const apiClient = new HttpService("http://localhost:5000");
+            const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
 
             const res = await apiClient.get(`/research/all`);
             const data=await res.json();

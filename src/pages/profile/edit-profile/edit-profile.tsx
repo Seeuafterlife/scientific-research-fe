@@ -12,7 +12,7 @@ const EditProfile = () => {
     const { notifyError, notifySuccess } = useToast();
 
     const [name, setName]=useState<string>(user?user.name:"");
-    const [imageUrl, setImageUrl] = useState<string | undefined>(user?.image?user?.image:"http://localhost:5000/upload/user/user-image.jpg");
+    const [imageUrl, setImageUrl] = useState<string | undefined>(user?.image?user?.image:"https://scientific-research-be1.vercel.app//upload/user/user-image.jpg");
     const [file, setFile]=useState<File | undefined>();
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +33,7 @@ const EditProfile = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const apiClient = new HttpService("http://localhost:5000");
+        const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
         const bodyData = new FormData();
 
         bodyData.append('name', name);
@@ -61,7 +61,7 @@ const EditProfile = () => {
                 email:decodedToken?.email ?? "",
                 role:decodedToken?.role ?? ""
             }
-            setImageUrl(decodedToken?.image?decodedToken?.image:"http://localhost:5000/upload/user/user-image.jpg")
+            setImageUrl(decodedToken?.image?decodedToken?.image:"https://scientific-research-be1.vercel.app//upload/user/user-image.jpg")
             setUser(user);
         }
     }

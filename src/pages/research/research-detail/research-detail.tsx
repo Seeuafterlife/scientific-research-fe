@@ -15,7 +15,7 @@ const ResearchDetail: React.FC = () => {
 
     const getResearch= async ()=>{
         try{
-            const apiClient = new HttpService("http://localhost:5000");
+            const apiClient = new HttpService("https://scientific-research-be1.vercel.app/");
 
             const res = await apiClient.get(`/research/${id}`);
             const data=await res.json();
